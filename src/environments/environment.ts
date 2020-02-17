@@ -3,7 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  firebaseConfig: {
+    apiKey: 'AIzaSyCrIbKGZXOB1KmSLW0zhhEq_s_Bq7uwzRk',
+    authDomain: 'venue-a4fce.firebaseapp.com',
+    databaseURL: 'https://venue-a4fce.firebaseio.com',
+    projectId: 'venue-a4fce',
+    storageBucket: 'venue-a4fce.appspot.com',
+    messagingSenderId: '240348778425',
+    appId: '1:240348778425:web:2b86fe367aabe8ef067068',
+    measurementId: 'G-S2BB3FKBF3'
+  }
 };
 
 /*

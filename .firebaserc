@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "venue-a4fce"
+  },
+  "targets": {
+    "venue-a4fce": {
+      "hosting": {
+        "Venue": [
+          "venue-a4fce"
+        ]
+      }
+    }
   }
 }
