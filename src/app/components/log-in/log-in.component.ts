@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { LoginService } from '../../services/login.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-log-in',
@@ -15,7 +15,7 @@ export class LogInComponent implements OnInit {
   // Injecting form builder ans service into our class
   constructor(
     private formBuilder: FormBuilder,
-    private loginService: LoginService
+    private authService: AuthService
     ) {
       // Creating form fields
       this.loginForm = this.formBuilder.group({
@@ -28,8 +28,10 @@ export class LogInComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.loginForm.value.email);
-    console.log(this.loginForm.value.password);
-    console.log(this.loginService.loginUser(this.loginForm.value.email, this.loginForm.value.password));
+    this.authService.loginUser(this.loginForm.value.email, this.loginForm.value.password);
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }

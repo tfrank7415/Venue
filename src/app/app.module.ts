@@ -14,6 +14,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ReactiveFormsModule } from '@angular/forms';
      MatCardModule,
      AngularFireModule.initializeApp(environment.firebaseConfig),
      AngularFireDatabaseModule,
-     ReactiveFormsModule
+     ReactiveFormsModule,
+     AngularFireAuthModule,
+     MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
