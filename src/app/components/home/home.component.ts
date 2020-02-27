@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,17 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HomeComponent implements OnInit {
 
+  createEventForm;
+
   constructor(
-    private authService: AuthService
-    ) { }
+    private authService: AuthService,
+    private formBuilder: FormBuilder
+    ) { this.createEventForm = this.formBuilder.group({
+      title: ['', Validators.required],
+      description: ['', Validators.required],
+      date: ['', Validators.required]
+    });
+  }
 
   ngOnInit() {
   }
